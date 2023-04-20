@@ -140,8 +140,4 @@ document.getElementById("new-game").addEventListener("click", function() {
 window.addEventListener("load", function() {
     init();
 });
-
-
-In this version of the code, the Hangman game logic is separated into its own file(hangman.js) and is loaded into the HTML file using a script tag.The hangman.js file defines functions
-for initializing the game state, handling user guesses, and starting a new game.It also includes event listeners
 for the form submission and new game button.This separation of concerns makes the code easier to read, understand, and maintain.
