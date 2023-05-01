@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<title>Hangman Game</title>
-</head>
-<body>
-	<h1>Hangman Game</h1>
-	<div id="word"></div>
-	<div id="guesses"></div>
-	<div id="result"></div>
-	<form>
-		<label for="guess">Guess a letter:</label>
-		<input type="text" id="guess" maxlength="1">
-		<button type="submit">Submit</button>
-	</form>
-
-	<script src="hangman.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+  </head>
+  <body>
+    <h1>Hangman</h1>
+    <p id="word"></p>
+    <p id="guesses"></p>
+    <form>
+      <label for="guess">Guess a letter:</label>
+      <input type="text" id="guess" name="guess" maxlength="1">
+      <button type="submit">Guess</button>
+    </form>
+    <p id="result"></p>
+    <button id="new-game">New Game</button>
+  </body>
 </html>
