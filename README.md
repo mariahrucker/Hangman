@@ -10,6 +10,61 @@ The game is played by guessing letters to complete a hidden word. The player has
 
 To start the game, simply open the `index.html` file in your web browser. The game will automatically start, and you can begin guessing letters.
 
+**Example:**
+
+```
+Word: _ _ _ _ _ _ _ _    Guesses left: 6
+
+Player guesses "e"
+
+Word: _ _ _ _ _ _ _ _    Guesses left: 5
+
+Player guesses "a"
+
+Word: _ _ _ A _ _ _ _    Guesses left: 5
+
+Player guesses "i"
+
+Word: _ _ _ A _ _ I _    Guesses left: 5
+
+Player guesses "r"
+
+Word: _ _ R A _ _ I _    Guesses left: 5
+
+Player guesses "t"
+
+Word: _ _ R A _ _ I _    Guesses left: 4
+
+Player guesses "s"
+
+Word: _ _ R A S _ I _    Guesses left: 4
+
+Player guesses "p"
+
+Word: _ _ R A S _ I _    Guesses left: 3
+
+Player guesses "l"
+
+Word: _ _ R A S _ I _    Guesses left: 2
+
+Player guesses "c"
+
+Word: _ C R A S _ I _    Guesses left: 2
+
+Player guesses "n"
+
+Word: _ C R A S N I _    Guesses left: 2
+
+Player guesses "o"
+
+Word: _ C R A S N I _    Guesses left: 1
+
+Player guesses "u"
+
+Word: _ C R A S N I _    Guesses left: 0
+You lose! The word was RUBY.
+```
+
 ## Code Structure
 
 The game logic is separated into its own file `hangman.js`. This file defines functions for initializing the game state, handling user guesses, and starting a new game. It also includes event listeners for the form submission and new game button.
