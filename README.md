@@ -65,6 +65,12 @@ Word: _ C R A S N I _    Guesses left: 0
 You lose! The word was RUBY.
 ```
 
+## Illustration
+
+**Here is the illustration of the Hangman on [CodePen](https://codepen.io/mariahrucker/pen/BaqworV)**
+
+![image](https://user-images.githubusercontent.com/117225197/235468045-afad3c53-43b3-437b-8d7d-ec504909896f.png)
+
 ## Code Structure
 
 The game logic is separated into its own file `hangman.js`. This file defines functions for initializing the game state, handling user guesses, and starting a new game. It also includes event listeners for the form submission and new game button.
