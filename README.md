@@ -1,6 +1,6 @@
 # Hangman Game
 
-This Hangman game is built using JavaScript and HTML. In this version of the code, the game logic is separated into its own file `hangman.js` and is loaded into the HTML file using a script tag. This separation of concerns makes the code easier to read, understand, and maintain.
+Hangman game is built using JavaScript and HTML. In this version of the code, the game logic is separated into its own file `hangman.js` and is loaded into the HTML file using a script tag. This separation of concerns makes the code easier to read, understand, and maintain.
 
 ## Game Play
 
@@ -94,7 +94,7 @@ While this Hangman game is just for fun, it's important to keep security conside
 
 ## License
 
-This code is licensed under the MIT License. See the LICENSE file for more information.
+Licensed under the MIT License. See the LICENSE file for more information.
 
 ## Contributions
 
@@ -102,7 +102,7 @@ Contributions to this project are welcome! If you find a bug or want to suggest 
 
 ## Credits
 
-This code was created by Mariah Rucker.
+Created by Mariah Rucker.
 
 ## Contact
 
