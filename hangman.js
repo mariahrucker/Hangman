@@ -32,6 +32,9 @@ const words = [
     "vhdl"
 ];
 
+let score = 0;
+score += 10; // Increment the score by 10 for each correct guess
+
 // Select a random word
 let word = words[Math.floor(Math.random() * words.length)];
 
@@ -128,6 +131,84 @@ function init() {
     // Enable submit button
     document.querySelector("form button").disabled = false;
 
+// Set the initial time limit to 60 seconds
+var timeLimit = 60;
+
+// Get the timer element
+var timerEl = document.querySelector("p#timer");
+
+// Update the timer every second
+var timerInterval = setInterval(function() {
+  // Decrement the time limit
+  timeLimit--;
+
+  // Update the timer display
+timerEl.innerText = timeLimit + " seconds remaining";
+
+  // Check if the time limit has reached zero
+  if (timeLimit === 0) {
+    // Stop the timer and end the game
+    clearInterval(timerInterval);
+    endGame();
+  }
+
+// Define difficulty levels
+const difficultyLevels = {
+  easy: {
+    maxGuesses: 10,
+    words: ["javascript", "python", "html", "css", "ruby"]
+  },
+  medium: {
+    maxGuesses: 8,
+    words: ["java", "csharp", "php", "swift", "kotlin"]
+  },
+  hard: {
+    maxGuesses: 6,
+    words: ["typescript", "go", "rust", "scala", "lua", "perl", "r", "sql", "bash", "powershell", "clojure", "groovy", "haskell", "ocaml", "pascal", "prolog", "scheme", "smalltalk", "verilog", "vhdl"]
+  }
+};
+
+// Get the difficulty level selection element
+const difficultyLevelSelect = document.getElementById("difficulty-level");
+
+// Event listener for difficulty level selection
+difficultyLevelSelect.addEventListener("change", function() {
+  // Get the selected difficulty level
+  const selectedDifficultyLevel = difficultyLevelSelect.value;
+
+  // Get the selected difficulty level configuration
+  const selectedDifficultyLevelConfig = difficultyLevels[selectedDifficultyLevel];
+
+  // Update the game configuration with the selected difficulty level
+  maxGuesses = selectedDifficultyLevelConfig.maxGuesses;
+  words = selectedDifficultyLevelConfig.words;
+
+  // Restart the game with the new configuration
+  restartGame();
+});
+
+// Function to restart the game with the current configuration
+function restartGame() {
+  // Reset game state
+  guesses = [];
+  remaining = maxGuesses;
+  result = "";
+  display = "";
+  word = words[Math.floor(Math.random() * words.length)];
+
+  // Display word as underscores
+  for (let i = 0; i < word.length; i++) {
+      display += "_ ";
+  }
+  document.getElementById("word").textContent = display;
+  document.getElementById("guesses").textContent = "Guesses left: " + remaining;
+  document.getElementById("result").textContent = "";
+
+  // Enable submit button
+  document.querySelector("form button").disabled = false;
+}
+
+}, 1000);
 }
 
 // Event listener for new game button
@@ -140,4 +221,23 @@ document.getElementById("new-game").addEventListener("click", function() {
 window.addEventListener("load", function() {
     init();
 });
-for the form submission and new game button.This separation of concerns makes the code easier to read, understand, and maintain.
+
+// Update the timer every second
+var timerInterval = setInterval(function() {
+  // Decrement the time limit
+  timeLimit--;
+
+  // Update the timer display
+  timerEl.innerText = timeLimit + " seconds remaining";
+
+  // Check if the time limit has reached zero
+  if (timeLimit === 0) {
+    // Stop the timer and end the game
+    clearInterval(timerInterval);
+    endGame();
+  }
+}, 1000);
+
+function endGame() {
+  // Do something when the game ends
+}
