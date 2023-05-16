@@ -69,7 +69,7 @@ You lose! The word was RUBY.
 
 **Here is the illustration of the Hangman on [CodePen](https://codepen.io/mariahrucker/pen/BaqworV)**
 
-![Hangman Illustration in CodePen](https://user-images.githubusercontent.com/117225197/235468045-afad3c53-43b3-437b-8d7d-ec504909896f.png)
+![Hangman Illustration in CodePen](https://github.com/mariahrucker/Hangman/assets/117225197/a05406f0-abb8-423d-92fd-7f4c29081da0)
 
 ## Code Structure
 
