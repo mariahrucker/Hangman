@@ -122,3 +122,19 @@ input[type=submit]:hover {
 
 #hangman .step4 {
   stroke-dasharray
+}
+
+#timer, label[for=difficulty] {
+  text-align: center;
+}
+
+.hangman-header {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
+#difficulty {
+  display: block;
+  margin: 0 auto;
+}
